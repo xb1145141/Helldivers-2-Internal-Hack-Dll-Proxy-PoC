@@ -87,6 +87,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("Inf Mission Time"), false}
         //, {"One / Two Hit Kill ( Bile Titan Bug, Aim Only Head )", false}
         , {_XOR_("No Reload"), true}
+        , {_XOR_("No Reload V2"), true}
         , {_XOR_("Max Resources"), false}
         , {_XOR_("Add 5 Samples"), true}
         , {_XOR_("No Recoil"), true}
@@ -365,6 +366,17 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     Memory::WriteAssemblyInstructions((uintptr_t)memory, NoReload + 14, NoReloadByte, Memory::ArrayLength(NoReloadByte));
                     gData.NoReload = !gData.NoReload;
                     printf(_XOR_("[Active] No Reload\n"));
+                }
+            }
+
+            if (checkboxes[i].title == _XOR_("No Reload V2"))
+            {
+                if (!gData.NoReload_v_2)
+                {
+                    uintptr_t NoReload_v2 = Memory::FindPattern(_XOR_("game.dll"), _XOR_("FF 4C 87 04 83 FE FF 74 52 49 8B 00 F6 40 14 01"));
+                    Memory::Nop((LPVOID)(NoReload_v2), 4);
+                    gData.NoReload_v_2 = !gData.NoReload_v_2;
+                    printf(_XOR_("[Active] No Reload V2\n"));
                 }
             }
 
