@@ -124,7 +124,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
     
     // Enable Cheats Automatically
     //displayCheckboxes(checkboxes, selectedCheckbox);
-    std::cout << _XOR_("Activate Cheat Feature.\n");
+    //std::cout << _XOR_("Activate Cheat Feature.\n");
     
     /*do {
 
