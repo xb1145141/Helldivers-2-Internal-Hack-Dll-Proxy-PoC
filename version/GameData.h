@@ -13,7 +13,7 @@ class GameData
 		bool	InfStamina = false;
 		bool	InfHealth = false;
 		bool	NoReload = false;
-		bool	NoReload_v_2 = false;
+		bool	NoReload_v2 = false;
 		bool	MaxResources = false;
 		bool	Add5Resources = false;
 		bool	Recoil = false;

@@ -371,11 +371,11 @@ DWORD WINAPI Payload(LPVOID lpParam)
 
             if (checkboxes[i].title == _XOR_("No Reload V2"))
             {
-                if (!gData.NoReload_v_2)
+                if (!gData.NoReload_v2)
                 {
                     uintptr_t NoReload_v2 = Memory::FindPattern(_XOR_("game.dll"), _XOR_("FF 4C 87 04 83 FE FF 74 52 49 8B 00 F6 40 14 01"));
                     Memory::Nop((LPVOID)(NoReload_v2), 4);
-                    gData.NoReload_v_2 = !gData.NoReload_v_2;
+                    gData.NoReload_v2 = !gData.NoReload_v2;
                     printf(_XOR_("[Active] No Reload V2\n"));
                 }
             }
