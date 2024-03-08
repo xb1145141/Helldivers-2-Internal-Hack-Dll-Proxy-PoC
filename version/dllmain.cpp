@@ -41,7 +41,7 @@ struct Checkbox {
 };
 
 // Function to display checkboxes
-void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedCheckbox) {
+/*void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedCheckbox) {
     system("cls"); // Clear the console (Windows specific)
 
     //printf(_XOR_("[Init] - Helldiver 2 PoC DLL Proxy...\n"));
@@ -63,7 +63,7 @@ void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedC
         std::cout << "[" << (checkboxes[i].checked ? 'X' : ' ') << "] " << checkboxes[i].title << "\n";
     }
     std::cout << "\n";
-}
+}*/
 
 DWORD WINAPI Payload(LPVOID lpParam)
 {
