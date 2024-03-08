@@ -32,7 +32,7 @@ void DestroyConsole()
 bool keyPressed(int vKey)
 {
     return (GetAsyncKeyState(vKey) & 1);
-}
+}*/
 
 //Console Menu using checkbox
 struct Checkbox {
@@ -63,7 +63,7 @@ void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedC
         std::cout << "[" << (checkboxes[i].checked ? 'X' : ' ') << "] " << checkboxes[i].title << "\n";
     }
     std::cout << "\n";
-}*/
+}
 
 DWORD WINAPI Payload(LPVOID lpParam)
 {
@@ -104,7 +104,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("All Armor in Armory"), true}
     
     }; // Initialize all checkboxes to unchecked
-    onst int numCheckboxes = checkboxes.size();
+    const int numCheckboxes = checkboxes.size();
     size_t selectedCheckbox = 0;
     //char userInput;
 
