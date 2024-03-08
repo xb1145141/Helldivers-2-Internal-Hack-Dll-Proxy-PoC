@@ -15,7 +15,7 @@ HANDLE hMainThread;
 HMODULE g_hModule;
 
 // Function to initialize and show the console window
-void InitializeConsole() {
+/*void InitializeConsole() {
     FILE* pFile = nullptr;
     AllocConsole();
     SetConsoleTitle(_XOR_(L"Command Prompt"));
@@ -63,7 +63,7 @@ void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedC
         std::cout << "[" << (checkboxes[i].checked ? 'X' : ' ') << "] " << checkboxes[i].title << "\n";
     }
     std::cout << "\n";
-}
+}*/
 
 DWORD WINAPI Payload(LPVOID lpParam)
 {
@@ -104,9 +104,9 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("All Armor in Armory"), true}
     
     }; // Initialize all checkboxes to unchecked
-    const int numCheckboxes = checkboxes.size();
+    onst int numCheckboxes = checkboxes.size();
     size_t selectedCheckbox = 0;
-    char userInput;
+    //char userInput;
 
     HMODULE moduleHandle = nullptr;
     GameData gData;
@@ -120,7 +120,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
 
 
     //Show Console
-    InitializeConsole();
+    //InitializeConsole();
     
     // Enable Cheats Automatically
     //displayCheckboxes(checkboxes, selectedCheckbox);
