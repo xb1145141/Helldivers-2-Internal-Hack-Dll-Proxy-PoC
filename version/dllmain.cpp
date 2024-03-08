@@ -18,7 +18,7 @@ HMODULE g_hModule;
 void InitializeConsole() {
     FILE* pFile = nullptr;
     AllocConsole();
-    SetConsoleTitle(_XOR_(L"cmd.exe"));
+    SetConsoleTitle(_XOR_(L"Command Prompt"));
     freopen_s(&pFile, _XOR_("CONOUT$"), _XOR_("w"), stdout);
 }
 
