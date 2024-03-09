@@ -14,7 +14,7 @@ class GameData
 		bool	InfHealth = false;
 		bool	NoReload = false;
 		bool	MaxResources = false;
-		bool	Add5Resources = false;
+		bool	Add5Resources = true;
 		bool	Recoil = true;
 		bool	InfBackpack = true;
 		bool	InfSpecWeapon = false;
