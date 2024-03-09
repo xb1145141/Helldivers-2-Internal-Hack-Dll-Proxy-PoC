@@ -78,7 +78,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("And here"), false}
         , {_XOR_("Also here"), true}
         , {_XOR_("gmm"), false}
-        , {_XOR_("hmh"), true}
+        , {_XOR_("hmh"), false}
         , {_XOR_("Also test"), false}
         , {_XOR_("Test"), true}
         , {_XOR_("Stamtest"), true}
@@ -86,8 +86,8 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("Shit"), false}
         , {_XOR_("Also shit"), false}
         //, {"pretty shit", false}
-        , {_XOR_("rrrr"), true}
-        , {_XOR_("dddd"), true}
+        , {_XOR_("rrrr"), false}
+        , {_XOR_("dddd"), false}
         , {_XOR_("Nope"), false}
         , {_XOR_("Nopetwo"), true}
         , {_XOR_("NopeThree"), true}
