@@ -85,7 +85,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("Sivarius"), true}
         , {_XOR_("What da faq"), false}
         , {_XOR_("whats goin on here"), false}
-        //, {"One / Two Hit Kill ( Bile Titan Bug, Aim Only Head )", false}
+        //, {"also shoulnd exist", false}
         , {_XOR_("hmmmm"), true}
         , {_XOR_("Thats useless"), true}
         , {_XOR_("And this also"), false}
@@ -119,49 +119,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
     Sleep(100);
 
 
-    //Show Console
-    //InitializeConsole();
-    
-    // Enable Cheats Automatically
-    //displayCheckboxes(checkboxes, selectedCheckbox);
-    //std::cout << _XOR_("Activate Cheat Feature.\n");
-    
-    /*do {
-
-        displayCheckboxes(checkboxes, selectedCheckbox);
-
-        // Get user input
-        userInput = _getch(); // Use _getch() for reading a single character without pressing Enter
-
-        // Handle arrow key input
-        switch (userInput) {
-        case 72: // Up arrow key
-            selectedCheckbox = (selectedCheckbox == 0) ? numCheckboxes - 1 : selectedCheckbox - 1;
-            break;
-
-        case 80: // Down arrow key
-            selectedCheckbox = (selectedCheckbox == numCheckboxes - 1) ? 0 : selectedCheckbox + 1;
-            break;
-
-        case ' ': // Space bar
-            // Toggle the state of the selected checkbox
-            checkboxes[selectedCheckbox].checked = !checkboxes[selectedCheckbox].checked;
-            break;
-
-        case 13: // Enter key
-            std::cout << _XOR_("Activate Cheat Feature.\n");
-            break;
-
-        case 27: // Esc key
-
-            break;
-
-        default:
-            // Ignore other key presses
-            break;
-        }
-
-    } while (userInput != 13);*/ // Loop until the Esc key is pressed
+   
 
     for (size_t i = 0; i < checkboxes.size(); ++i) {
         if (checkboxes[i].checked)
