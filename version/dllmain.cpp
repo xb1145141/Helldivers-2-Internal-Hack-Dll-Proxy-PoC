@@ -74,34 +74,34 @@ DWORD WINAPI Payload(LPVOID lpParam)
 
     //Console Menu
     std::vector<Checkbox> checkboxes = { 
-          {_XOR_("some random trash here"), false}
-        , {_XOR_("And here"), false}
-        , {_XOR_("Also here"), true}
-        , {_XOR_("gmm"), false}
-        , {_XOR_("hmh"), false}
-        , {_XOR_("Also test"), false}
-        , {_XOR_("Test"), true}
-        , {_XOR_("Stamtest"), true}
-        , {_XOR_("Strat Test"), true}
-        , {_XOR_("Shit"), false}
-        , {_XOR_("Also shit"), false}
-        //, {"pretty shit", false}
-        , {_XOR_("rrrr"), false}
-        , {_XOR_("dddd"), false}
-        , {_XOR_("Nope"), false}
-        , {_XOR_("Nopetwo"), true}
-        , {_XOR_("NopeThree"), true}
-        , {_XOR_("Rostikan"), true}
-        , {_XOR_("Xvark"), false}
-        , {_XOR_("MeGusta"), true}
-        , {_XOR_("Sivarius"), true}
-        , {_XOR_("ThatsGood"), true}
-        , {_XOR_("Nahidwin"), true}
-        , {_XOR_("Doineedthis"), true}
-        , {_XOR_("Noidont"), true}
-        , {_XOR_("Ineedthis"), true}
-        , {_XOR_("asineedthis"), true}
-        , {_XOR_("AndEvenThose"), true}
+    /* Inf Health   */      {_XOR_("some random trash here"), false}
+    /* Inf Grenades */       , {_XOR_("And here"), false}
+    /* Inf Grenades(Legit)  */    , {_XOR_("Also here"), true}
+    /* Inf Ammo  */    , {_XOR_("gmm"), false}
+    /* Inf Ammo(Legit)  */    , {_XOR_("hmh"), false}
+    /* Inf Syringes  */   , {_XOR_("Also test"), false}
+    /* Inf Syringes(Legit)  */    , {_XOR_("Test"), true}
+    /* Inf Stamina  */    , {_XOR_("Stamtest"), true}
+    /* Inf Stratagems  */    , {_XOR_("Strat Test"), true}
+    /* MoveSpeed X6  */    , {_XOR_("Shit"), false}
+    /* Inf Mission Time  */    , {_XOR_("Also shit"), false}
+    /* One / Two Hit Kill ( Bile Titan Bug, Aim Only Head  */    //, {"pretty shit", false}
+    /* No Reload  */    , {_XOR_("rrrr"), false}
+    /* No Reload V2  */    , {_XOR_("dddd"), false}
+    /* Max Resources  */    , {_XOR_("Nope"), false}
+    /* Add 5 Samples  */    , {_XOR_("Nopetwo"), true}
+    /* No Recoil  */    , {_XOR_("NopeThree"), true}
+    /* Inf Backpack  */    , {_XOR_("Rostikan"), true}
+    /* Inf Special Weapon  */    , {_XOR_("Xvark"), false}
+    /* No Laser Cannon Overheat  */    , {_XOR_("MeGusta"), true}
+    /* Instant Railgun  */   , {_XOR_("Sivarius"), true}
+    /* Show All Map Icons  */    , {_XOR_("ThatsGood"), true}
+    /* No Stationary Turret Overheat  */    , {_XOR_("Nahidwin"), true}
+    /* No Backpack Shield Cooldown  */   , {_XOR_("Doineedthis"), true}
+    /* No JetPack Cooldown  */    , {_XOR_("Noidont"), true}
+    /* All Stratagems in Loadout  */   , {_XOR_("Ineedthis"), true}
+    /* All Equipment in Armory  */    , {_XOR_("asineedthis"), true}
+    /* All Armor in Armory  */    , {_XOR_("AndEvenThose"), true}
     
     }; // Initialize all checkboxes to unchecked
     const int numCheckboxes = checkboxes.size();
