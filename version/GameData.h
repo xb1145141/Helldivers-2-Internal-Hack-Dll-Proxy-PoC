@@ -10,13 +10,12 @@ class GameData
 		bool	InfSyringesLegit = false;
 		bool	InfStratagems = false;
 		bool	InfMissionTime = false;
-		bool	InfStamina = false;
+		bool	InfStamina = true;
 		bool	InfHealth = false;
 		bool	NoReload = false;
-		bool	NoReload_v2 = false;
 		bool	MaxResources = false;
 		bool	Add5Resources = false;
-		bool	Recoil = false;
+		bool	Recoil = true;
 		bool	InfBackpack = false;
 		bool	InfSpecWeapon = false;
 		bool	NoCannonOverheat = false;
@@ -24,10 +23,10 @@ class GameData
 		bool	JetpackNoCD = false;
 		bool	ShieldNoCD = false;
 		bool	InstantRailGun = false;
-		bool	ShowAllMapIcons = false;
-		bool	AllStratagems = false;
-		bool	AllEquipment = false;
-		bool	AllArmor = false;
+		bool	ShowAllMapIcons = true;
+		bool	AllStratagems = true;
+		bool	AllEquipment = true;
+		bool	AllArmor = true;
 		bool	Speedhack = false;
 
 		bool	OHK = false;

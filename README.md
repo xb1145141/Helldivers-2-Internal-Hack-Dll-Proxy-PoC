@@ -8,39 +8,34 @@
 <details>
   <summary>Click to show</summary>
   
-```c
-//Console Menu
-std::vector<Checkbox> checkboxes = { 
-      {_XOR_("Inf Health"), false}  //Makes you invulnerable to most forms of damage
-    , {_XOR_("Inf Grenades"), false} //Grenades are always at max capacity
-    , {_XOR_("Inf Grenades(Legit)"), false} //Grenades decrease, but never drops to zero. Allows you to collect grenade boxes
-    , {_XOR_("Inf Ammo"), false} //Ammunition is always at max capacity
-    , {_XOR_("Inf Ammo(Legit)"), false} //Ammunition decreases, but never drops to zero. Allows you to collect supply packs
-    , {_XOR_("Inf Syringes"), false} //Syringes are always at max capacity
-    , {_XOR_("Inf Syringes(Legit)"), false}  //Syringes decrease, but never drops to zero. Allows you to collect supply packs
-    , {_XOR_("Inf Stamina"), false} //Disables stamina meter. Run forever
-    , {_XOR_("Inf Stratagems"), false} //Stratagems are always at maximum capacity. No stratagem cooldown
-    , {_XOR_("MoveSpeed X6"), false} //Move 6x faster than usual
-    , {_XOR_("Inf Mission Time"), false} //Mission timer does not decrease
-    , {_XOR_("No Reload"), false} //Magazine capacity does not decrease
-    , {_XOR_("No Reload V2"), false} //Some other weapons magazine capacity does not decrease
-    , {_XOR_("Max Resources"), false} //Picking up a sample will pick up x500 of each type. There is a max capacity on board your own ship
-    , {_XOR_("Add 5 Samples"), false} //Picking up a sample adds 5 samples to your inventory
-    , {_XOR_("No Recoil"), false} //Prevents your weapon from having a recoil effect
-    , {_XOR_("Inf Backpack"), false} //Backpack 'resource' is never depleted (eg. full ammo, rover no overheat)
-    , {_XOR_("Inf Special Weapon"), false} //Special weapon has unlimited ammunition
-    , {_XOR_("No Laser Cannon Overheat"), false} //Laser cannon can be fired forever without swapping cartridge
-    , {_XOR_("Instant Railgun"), false} //Arc Thrower and Railgun do not need to be charged for max damage
-    , {_XOR_("Show All Map Icons"), false} //Simulates radar tower, all POI and objectives shown on the map
-    , {_XOR_("No Stationary Turret Overheat"), false} //Heavy Machine Gun emplacement does not require cooling down
-    , {_XOR_("No Backpack Shield Cooldown"), false} //When backpack energy shield is broken, it instantly gets replaced
-    , {_XOR_("No JetPack Cooldown"), false} //Jetpack does not require recharging, jump constantly
-    , {_XOR_("All Stratagems in Loadout"), false} //Enables in-development stratagems, as well as locked stratagems
-    , {_XOR_("All Equipment in Armory"), false} //Enables in-development, or locked, primary, secondary weapons, and grenades
-    , {_XOR_("All Armor in Armory"), false} //Enables in-development, or locked armor
-
-};
-```
+  | Cheat | Description |
+  |----------|----------|
+  | Infinite Health | Makes you invulnerable to most forms of damage |
+  | Infinite Grenades | Grenades are always at max capacity |
+  | Infinite Grenades (legit) | Grenades decrease, but never drops to zero. Allows you to collect grenade boxes |
+  | Infinite Ammunition | Ammunition is always at max capacity |
+  | Infinite Ammunition (legit) | Ammunition decreases, but never drops to zero. Allows you to collect supply packs |
+  | Infinite Syringes | Syringes are always at max capacity |
+  | Infinite Syringes (legit) | Syringes decrease, but never drops to zero. Allows you to collect supply packs |
+  | Infinite Stamina | Disables stamina meter. Run forever |
+  | Infinite Stratagems | Stratagems are always at maximum capacity. No stratagem cooldown |
+  | MoveSpeed x6 | Move 6x faster than usual |
+  | Infinite Mission Time | Mission timer does not decrease |
+  | No Reload | Magazine capacity does not decrease |
+  | Max Resources | Picking up a sample will pick up x500 of each type. There is a max capacity on board your own ship |
+  | Add 5 samples | Picking up a sample adds 5 samples to your inventory |
+  | No Recoil | Prevents your weapon from having a recoil effect |
+  | Infinite Backpack | Backpack 'resource' is never depleted (eg. full ammo, rover no overheat) |
+  | Infinite Special Weapon | Special weapon has unlimited ammunition |
+  | No Laser Cannon Overheat | Laser cannon can be fired forever without swapping cartridge |
+  | Instant Railgun | Arc Thrower and Railgun do not need to be charged for max damage |
+  | Show All Map Icons | Simulates radar tower, all POI and objectives shown on the map |
+  | No Stationary Turret Overheat | Heavy Machine Gun emplacement does not require cooling down |
+  | No Backpack Shield Cooldown | When backpack energy shield is broken, it instantly gets replaced |
+  | No Jetpack Cooldown | Jetpack does not require recharging, jump constantly |
+  | All Stratagems in Loadout | Enables in-development stratagems, as well as locked stratagems |
+  | All Equipment in Armory | Enables in-development, or locked, primary, secondary weapons, and grenades |
+  | All Armor in Armory | Enables in-development, or locked armor |
 </details>
 
 ## How to use
