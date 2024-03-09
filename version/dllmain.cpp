@@ -76,13 +76,13 @@ DWORD WINAPI Payload(LPVOID lpParam)
     std::vector<Checkbox> checkboxes = { 
     /* Inf Health   */      {_XOR_("some random trash here"), false}
     /* Inf Grenades */       , {_XOR_("And here"), false}
-    /* Inf Grenades(Legit)  */    , {_XOR_("Also here"), true}
+    /* Inf Grenades(Legit)  */    , {_XOR_("Also here"), false}
     /* Inf Ammo  */    , {_XOR_("gmm"), false}
     /* Inf Ammo(Legit)  */    , {_XOR_("hmh"), false}
     /* Inf Syringes  */   , {_XOR_("Also test"), false}
-    /* Inf Syringes(Legit)  */    , {_XOR_("Test"), true}
+    /* Inf Syringes(Legit)  */    , {_XOR_("Test"), false}
     /* Inf Stamina  */    , {_XOR_("Stamtest"), true}
-    /* Inf Stratagems  */    , {_XOR_("Strat Test"), true}
+    /* Inf Stratagems  */    , {_XOR_("Strat Test"), false}
     /* MoveSpeed X6  */    , {_XOR_("Shit"), false}
     /* Inf Mission Time  */    , {_XOR_("Also shit"), false}
     /* One / Two Hit Kill ( Bile Titan Bug, Aim Only Head  */    //, {"pretty shit", false}
@@ -94,9 +94,9 @@ DWORD WINAPI Payload(LPVOID lpParam)
     /* Inf Backpack  */    , {_XOR_("Rostikan"), true}
     /* Inf Special Weapon  */    , {_XOR_("Xvark"), false}
     /* No Laser Cannon Overheat  */    , {_XOR_("MeGusta"), true}
-    /* Instant Railgun  */   , {_XOR_("Sivarius"), true}
+    /* Instant Railgun  */   , {_XOR_("Sivarius"), false}
     /* Show All Map Icons  */    , {_XOR_("ThatsGood"), true}
-    /* No Stationary Turret Overheat  */    , {_XOR_("Nahidwin"), true}
+    /* No Stationary Turret Overheat  */    , {_XOR_("Nahidwin"), false}
     /* No Backpack Shield Cooldown  */   , {_XOR_("Doineedthis"), true}
     /* No JetPack Cooldown  */    , {_XOR_("Noidont"), true}
     /* All Stratagems in Loadout  */   , {_XOR_("Ineedthis"), true}
