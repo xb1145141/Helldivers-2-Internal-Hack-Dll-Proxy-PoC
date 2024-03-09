@@ -74,34 +74,34 @@ DWORD WINAPI Payload(LPVOID lpParam)
 
     //Console Menu
     std::vector<Checkbox> checkboxes = { 
-          {_XOR_("Inf Health"), true}
-        , {_XOR_("Inf Grenades"), false}
-        , {_XOR_("Inf Grenades(Legit)"), true}
-        , {_XOR_("Inf Ammo"), false}
-        , {_XOR_("Inf Ammo(Legit)"), true}
-        , {_XOR_("Inf Syringes"), false}
-        , {_XOR_("Inf Syringes(Legit)"), true}
-        , {_XOR_("Inf Stamina"), true}
-        , {_XOR_("Inf Stratagems"), true}
-        , {_XOR_("MoveSpeed X6"), false}
-        , {_XOR_("Inf Mission Time"), false}
+          {_XOR_("some random trash here"), true}
+        , {_XOR_("And here"), false}
+        , {_XOR_("Also here"), true}
+        , {_XOR_("Oops"), false}
+        , {_XOR_("What"), true}
+        , {_XOR_("huh"), false}
+        , {_XOR_("Rostikan"), true}
+        , {_XOR_("Sigma"), true}
+        , {_XOR_("Sivarius"), true}
+        , {_XOR_("What da faq"), false}
+        , {_XOR_("whats goin on here"), false}
         //, {"One / Two Hit Kill ( Bile Titan Bug, Aim Only Head )", false}
-        , {_XOR_("No Reload"), true}
-        , {_XOR_("No Reload V2"), true}
-        , {_XOR_("Max Resources"), false}
-        , {_XOR_("Add 5 Samples"), true}
-        , {_XOR_("No Recoil"), true}
-        , {_XOR_("Inf Backpack"), true}
-        , {_XOR_("Inf Special Weapon"), false}
-        , {_XOR_("No Laser Cannon Overheat"), true}
-        , {_XOR_("Instant Railgun"), true}
-        , {_XOR_("Show All Map Icons"), true}
-        , {_XOR_("No Stationary Turret Overheat"), true}
-        , {_XOR_("No Backpack Shield Cooldown"), true}
-        , {_XOR_("No JetPack Cooldown"), true}
-        , {_XOR_("All Stratagems in Loadout"), true}
-        , {_XOR_("All Equipment in Armory"), true}
-        , {_XOR_("All Armor in Armory"), true}
+        , {_XOR_("hmmmm"), true}
+        , {_XOR_("Thats useless"), true}
+        , {_XOR_("And this also"), false}
+        , {_XOR_("Probably usefull"), true}
+        , {_XOR_("Nope"), true}
+        , {_XOR_("And nope"), true}
+        , {_XOR_("Ehhh no"), false}
+        , {_XOR_("Guess good"), true}
+        , {_XOR_("Nah"), true}
+        , {_XOR_("Amazing"), true}
+        , {_XOR_("wut"), true}
+        , {_XOR_("Wow"), true}
+        , {_XOR_("Cool thing"), true}
+        , {_XOR_("WHADAFAQ"), true}
+        , {_XOR_("YES"), true}
+        , {_XOR_("YOINK"), true}
     
     }; // Initialize all checkboxes to unchecked
     const int numCheckboxes = checkboxes.size();
