@@ -14,25 +14,7 @@
 HANDLE hMainThread;
 HMODULE g_hModule;
 
-// Function to initialize and show the console window
-/*void InitializeConsole() {
-    FILE* pFile = nullptr;
-    AllocConsole();
-    SetConsoleTitle(_XOR_(L"Command Prompt"));
-    freopen_s(&pFile, _XOR_("CONOUT$"), _XOR_("w"), stdout);
-}
 
-void DestroyConsole()
-{
-    DestroyWindow(GetConsoleWindow());
-    FreeConsole();
-}
-
-//Check Key Pressed
-bool keyPressed(int vKey)
-{
-    return (GetAsyncKeyState(vKey) & 1);
-}*/
 
 //Console Menu using checkbox
 struct Checkbox {
@@ -40,30 +22,7 @@ struct Checkbox {
     bool checked;
 };
 
-// Function to display checkboxes
-/*void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedCheckbox) {
-    system("cls"); // Clear the console (Windows specific)
 
-    //printf(_XOR_("[Init] - Helldiver 2 PoC DLL Proxy...\n"));
-    //printf(_XOR_("[Init] - Thanks to cfemen and gir489...\n"));
-
-    //printf(_XOR_("[Ready] : Select some of the features below by pressing the [Space] key.\n"));
-    //printf(_XOR_("[Ready] : Press [Enter] to run the feature you selected.\n"));
-    //printf(_XOR_("[Ready] : After pressing [Enter], the selected features cannot be changed.\n"));
-
-    std::cout << _XOR_("Checkboxes:\n");
-    for (size_t i = 0; i < checkboxes.size(); ++i) {
-        if (i == selectedCheckbox) {
-            std::cout << "> ";
-        }
-        else {
-            std::cout << "  ";
-        }
-
-        std::cout << "[" << (checkboxes[i].checked ? 'X' : ' ') << "] " << checkboxes[i].title << "\n";
-    }
-    std::cout << "\n";
-}*/
 
 DWORD WINAPI Payload(LPVOID lpParam)
 {
@@ -604,29 +563,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            /*if (checkboxes[i].title == "One / Two Hit Kill ( Bile Titan Bug, Aim Only Head )")
-            {
-                if (!gData.OHK)
-                {
-                    BYTE OHKByte[] =
-                    {
-                        0x83, 0xBF, 0x38, 0x0B, 0x00, 0x00, 0x0A,
-                        0x0F, 0x85, 0x05, 0x00, 0x00, 0x00,
-                        0xE9, 0x18, 0x00, 0x00, 0x00,
-                        0xC7, 0x87, 0x44, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                        0xFF, 0x25, 0x00, 0x00, 0x00, 0x00, 0x66, 0x4A, 0x6B, 0x80, 0x01, 0x00, 0x00, 0x00,
-                        0x89, 0x87, 0x44, 0x64, 0x00, 0x00,
-                        0xFF, 0x25, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-                    };
-
-                    uintptr_t OHK = Memory::FindPattern("game.dll", "89 87 44 64 00 00");
-                    LPVOID memory = Memory::AllocateMemory(OHK, 0x100);
-                    Memory::CreateTrampoline(OHK, memory);
-                    Memory::WriteAssemblyInstructions((uintptr_t)memory, OHK + 15, OHKByte, Memory::ArrayLength(OHKByte));
-                    gData.OHK = !gData.OHK;
-                   //printf("[Active] Instant Railgun\n");
-                }
-            }*/
+           
             
 
 
