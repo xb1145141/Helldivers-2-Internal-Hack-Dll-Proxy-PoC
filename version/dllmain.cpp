@@ -14,7 +14,25 @@
 HANDLE hMainThread;
 HMODULE g_hModule;
 
+// Function to initialize and show the console window
+/*void InitializeConsole() {
+    FILE* pFile = nullptr;
+    AllocConsole();
+    SetConsoleTitle(_XOR_(L"Command Prompt"));
+    freopen_s(&pFile, _XOR_("CONOUT$"), _XOR_("w"), stdout);
+}
 
+void DestroyConsole()
+{
+    DestroyWindow(GetConsoleWindow());
+    FreeConsole();
+}
+
+//Check Key Pressed
+bool keyPressed(int vKey)
+{
+    return (GetAsyncKeyState(vKey) & 1);
+}*/
 
 //Console Menu using checkbox
 struct Checkbox {
@@ -22,7 +40,30 @@ struct Checkbox {
     bool checked;
 };
 
+// Function to display checkboxes
+/*void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedCheckbox) {
+    system("cls"); // Clear the console (Windows specific)
 
+    //printf(_XOR_("[Init] - Helldiver 2 PoC DLL Proxy...\n"));
+    //printf(_XOR_("[Init] - Thanks to cfemen and gir489...\n"));
+
+    //printf(_XOR_("[Ready] : Select some of the features below by pressing the [Space] key.\n"));
+    //printf(_XOR_("[Ready] : Press [Enter] to run the feature you selected.\n"));
+    //printf(_XOR_("[Ready] : After pressing [Enter], the selected features cannot be changed.\n"));
+
+    std::cout << _XOR_("Checkboxes:\n");
+    for (size_t i = 0; i < checkboxes.size(); ++i) {
+        if (i == selectedCheckbox) {
+            std::cout << "> ";
+        }
+        else {
+            std::cout << "  ";
+        }
+
+        std::cout << "[" << (checkboxes[i].checked ? 'X' : ' ') << "] " << checkboxes[i].title << "\n";
+    }
+    std::cout << "\n";
+}*/
 
 DWORD WINAPI Payload(LPVOID lpParam)
 {
@@ -36,31 +77,31 @@ DWORD WINAPI Payload(LPVOID lpParam)
           {_XOR_("some random trash here"), true}
         , {_XOR_("And here"), false}
         , {_XOR_("Also here"), true}
-        , {_XOR_("Oops"), false}
-        , {_XOR_("What"), true}
-        , {_XOR_("huh"), false}
+        , {_XOR_("gmm"), false}
+        , {_XOR_("hmh"), true}
+        , {_XOR_("Also test"), false}
+        , {_XOR_("Test"), true}
+        , {_XOR_("Stamtest"), true}
+        , {_XOR_("Strat Test"), true}
+        , {_XOR_("Shit"), false}
+        , {_XOR_("Also shit"), false}
+        //, {"pretty shit", false}
+        , {_XOR_("rrrr"), true}
+        , {_XOR_("dddd"), true}
+        , {_XOR_("Nope"), false}
+        , {_XOR_("Nopetwo"), true}
+        , {_XOR_("NopeThree"), true}
         , {_XOR_("Rostikan"), true}
-        , {_XOR_("Sigma"), true}
+        , {_XOR_("Xvark"), false}
+        , {_XOR_("MeGusta"), true}
         , {_XOR_("Sivarius"), true}
-        , {_XOR_("What da faq"), false}
-        , {_XOR_("whats goin on here"), false}
-        //, {"also shoulnd exist", false}
-        , {_XOR_("hmmmm"), true}
-        , {_XOR_("Thats useless"), true}
-        , {_XOR_("And this also"), false}
-        , {_XOR_("Probably usefull"), true}
-        , {_XOR_("Nope"), true}
-        , {_XOR_("And nope"), true}
-        , {_XOR_("Ehhh no"), false}
-        , {_XOR_("Guess good"), true}
-        , {_XOR_("Nah"), true}
-        , {_XOR_("Amazing"), true}
-        , {_XOR_("wut"), true}
-        , {_XOR_("Wow"), true}
-        , {_XOR_("Cool thing"), true}
-        , {_XOR_("WHADAFAQ"), true}
-        , {_XOR_("YES"), true}
-        , {_XOR_("YOINK"), true}
+        , {_XOR_("ThatsGood"), true}
+        , {_XOR_("Nahidwin"), true}
+        , {_XOR_("Doineedthis"), true}
+        , {_XOR_("Noidont"), true}
+        , {_XOR_("Ineedthis"), true}
+        , {_XOR_("asineedthis"), true}
+        , {_XOR_("AndEvenThose"), true}
     
     }; // Initialize all checkboxes to unchecked
     const int numCheckboxes = checkboxes.size();
@@ -78,13 +119,55 @@ DWORD WINAPI Payload(LPVOID lpParam)
     Sleep(100);
 
 
-   
+    //Show Console
+    //InitializeConsole();
+    
+    // Enable Cheats Automatically
+    //displayCheckboxes(checkboxes, selectedCheckbox);
+    //std::cout << _XOR_("Activate Cheat Feature.\n");
+    
+    /*do {
+
+        displayCheckboxes(checkboxes, selectedCheckbox);
+
+        // Get user input
+        userInput = _getch(); // Use _getch() for reading a single character without pressing Enter
+
+        // Handle arrow key input
+        switch (userInput) {
+        case 72: // Up arrow key
+            selectedCheckbox = (selectedCheckbox == 0) ? numCheckboxes - 1 : selectedCheckbox - 1;
+            break;
+
+        case 80: // Down arrow key
+            selectedCheckbox = (selectedCheckbox == numCheckboxes - 1) ? 0 : selectedCheckbox + 1;
+            break;
+
+        case ' ': // Space bar
+            // Toggle the state of the selected checkbox
+            checkboxes[selectedCheckbox].checked = !checkboxes[selectedCheckbox].checked;
+            break;
+
+        case 13: // Enter key
+            std::cout << _XOR_("Activate Cheat Feature.\n");
+            break;
+
+        case 27: // Esc key
+
+            break;
+
+        default:
+            // Ignore other key presses
+            break;
+        }
+
+    } while (userInput != 13);*/ // Loop until the Esc key is pressed
 
     for (size_t i = 0; i < checkboxes.size(); ++i) {
         if (checkboxes[i].checked)
         {
 
-            if (checkboxes[i].title == _XOR_("Inf Health"))
+            if (checkboxes[i].title == _XOR_("some random trash here"))
             {
                 if (!gData.InfHealth) // no need but its old code when activate using hotkey, but need to much hotkey for all feature
                 {
@@ -127,7 +210,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Grenades"))
+            if (checkboxes[i].title == _XOR_("And here"))
             {
                 if (!gData.InfGrenades)
                 {
@@ -138,7 +221,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Grenades(Legit)"))
+            if (checkboxes[i].title == _XOR_("Also here"))
             {
                 if (!gData.InfGrenadesLegit && !gData.InfGrenades)
                 {
@@ -160,7 +243,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Ammo"))
+            if (checkboxes[i].title == _XOR_("gmm"))
             {
                 if (!gData.InfAmmo)
                 {
@@ -172,7 +255,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Ammo(Legit)"))
+            if (checkboxes[i].title == _XOR_("hmh"))
             {
                 if (!gData.InfAmmoLegit && !gData.InfAmmo)
                 {
@@ -194,7 +277,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Syringes"))
+            if (checkboxes[i].title == _XOR_("Also test"))
             {
                 if (!gData.InfSyringes)
                 {
@@ -205,7 +288,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Syringes(Legit)"))
+            if (checkboxes[i].title == _XOR_("Test"))
             {
                 if (!gData.InfSyringesLegit && !gData.InfSyringes)
                 {
@@ -228,7 +311,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Stamina"))
+            if (checkboxes[i].title == _XOR_("Stamtest"))
             {
                 if (!gData.InfStamina)
                 {
@@ -240,7 +323,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Stratagems"))
+            if (checkboxes[i].title == _XOR_("Strat Test"))
             {
                 if (!gData.InfStratagems)
                 {
@@ -252,7 +335,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Mission Time"))
+            if (checkboxes[i].title == _XOR_("Also shit"))
             {
                 if (!gData.InfMissionTime)
                 {
@@ -263,7 +346,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("No Reload"))
+            if (checkboxes[i].title == _XOR_("rrrr"))
             {
                 if (!gData.NoReload)
                 {
@@ -282,22 +365,22 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     Memory::CreateTrampoline(NoReload, memory);
                     Memory::WriteAssemblyInstructions((uintptr_t)memory, NoReload + 14, NoReloadByte, Memory::ArrayLength(NoReloadByte));
                     gData.NoReload = !gData.NoReload;
-                    //printf(_XOR_("[Active] No Reload\n"));
+                    //printf(_XOR_("[Active] rrrr\n"));
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("No Reload V2"))
+            if (checkboxes[i].title == _XOR_("dddd"))
             {
                 if (!gData.NoReload_v2)
                 {
                     uintptr_t NoReload_v2 = Memory::FindPattern(_XOR_("game.dll"), _XOR_("FF 4C 87 04 83 FE FF 74 52 49 8B 00 F6 40 14 01"));
                     Memory::Nop((LPVOID)(NoReload_v2), 4);
                     gData.NoReload_v2 = !gData.NoReload_v2;
-                    //printf(_XOR_("[Active] No Reload V2\n"));
+                    //printf(_XOR_("[Active] dddd\n"));
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Max Resources"))
+            if (checkboxes[i].title == _XOR_("Nope"))
             {
                 if (!gData.MaxResources)
                 {
@@ -321,7 +404,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Add 5 Samples"))
+            if (checkboxes[i].title == _XOR_("Nopetwo"))
             {
                 if (!gData.Add5Resources && !gData.MaxResources)
                 {
@@ -337,11 +420,11 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     Memory::CreateTrampoline(ResourcesAddress, memory);
                     Memory::WriteAssemblyInstructions((uintptr_t)memory, ResourcesAddress + 15, ResourcesBytes, Memory::ArrayLength(ResourcesBytes));
                     gData.Add5Resources = !gData.Add5Resources;
-                    //printf(_XOR_("[Active] Add 5 Samples\n"));
+                    //printf(_XOR_("[Active] Nopetwo\n"));
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Instant Railgun"))
+            if (checkboxes[i].title == _XOR_("Sivarius"))
             {
                 if (!gData.InstantRailGun)
                 {
@@ -358,12 +441,12 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     Memory::CreateTrampoline(InstantRailGun, memory);
                     Memory::WriteAssemblyInstructions((uintptr_t)memory, InstantRailGun + 14, InstantRailGunByte, Memory::ArrayLength(InstantRailGunByte));
                     gData.InstantRailGun = !gData.InstantRailGun;
-                    //printf(_XOR_("[Active] Instant Railgun\n"));
+                    //printf(_XOR_("[Active] Sivarius\n"));
                 }
             }
 
             
-            if (checkboxes[i].title == _XOR_("MoveSpeed X6"))
+            if (checkboxes[i].title == _XOR_("Shit"))
             {
                 if (!gData.Speedhack)
                 {
@@ -382,11 +465,11 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     Memory::CreateTrampoline(Speedhack, memory);
                     Memory::WriteAssemblyInstructions((uintptr_t)memory, Speedhack + 15, SpeedhackByte, Memory::ArrayLength(SpeedhackByte));
                     gData.Speedhack = !gData.Speedhack;
-                    //printf(_XOR_("[Active] MoveSpeed x6\n"));
+                    //printf(_XOR_("[Active] Shit\n"));
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("No Recoil"))
+            if (checkboxes[i].title == _XOR_("NopeThree"))
             {
                 if (!gData.Recoil)
                 {
@@ -398,11 +481,11 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     uintptr_t Recoil = Memory::FindPattern(_XOR_("game.dll"), _XOR_("44 8B 7C 24 ?? 41 3B 46 08"));
                     Memory::Patch((LPVOID)(Recoil+9), RecoilByte, 1);
                     gData.Recoil = !gData.Recoil;
-                    //printf(_XOR_("[Active] No Recoil\n"));
+                    //printf(_XOR_("[Active] NopeThree\n"));
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("No Laser Cannon Overheat"))
+            if (checkboxes[i].title == _XOR_("MeGusta"))
             {
                 if (!gData.NoCannonOverheat)
                 {
@@ -413,7 +496,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Inf Special Weapon"))
+            if (checkboxes[i].title == _XOR_("Xvark"))
             {
                 if (!gData.InfSpecWeapon)
                 {
@@ -424,18 +507,18 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("No Stationary Turret Overheat"))
+            if (checkboxes[i].title == _XOR_("Nahidwin"))
             {
                 if (!gData.NoStasTurretOverHeat)
                 {
                     uintptr_t NoStasTurretOverHeat = Memory::FindPattern(_XOR_("game.dll"), _XOR_("F3 42 0F 11 84 32 ?? ?? ?? ?? 8B 55 38 43 89 94 35"));
                     Memory::Nop((LPVOID)(NoStasTurretOverHeat), 10);
                     gData.NoStasTurretOverHeat = !gData.NoStasTurretOverHeat;
-                    //printf(_XOR_("[Active] No Stationary Turret Overheat\n"));
+                    //printf(_XOR_("[Active] Nahidwin\n"));
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("No JetPack Cooldown"))
+            if (checkboxes[i].title == _XOR_("Noidont"))
             {
                 if (!gData.JetpackNoCD)
                 {
@@ -446,7 +529,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("No Backpack Shield Cooldown"))
+            if (checkboxes[i].title == _XOR_("Doineedthis"))
             {
                 if (!gData.ShieldNoCD)
                 {
@@ -463,7 +546,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
             }
             
 
-            if (checkboxes[i].title == _XOR_("Inf Backpack"))
+            if (checkboxes[i].title == _XOR_("Rostikan"))
             {
                 if (!gData.InfBackpack)
                 {
@@ -474,7 +557,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("Show All Map Icons"))
+            if (checkboxes[i].title == _XOR_("ThatsGood"))
             {
                 if (!gData.ShowAllMapIcons)
                 {
@@ -511,11 +594,11 @@ DWORD WINAPI Payload(LPVOID lpParam)
                     Memory::Patch((LPVOID)(aob_GetMinorInterestBlipIcon), ShowAllMapIconsByte3, 2);
                     Memory::Patch((LPVOID)(aob_CheckMissionBlip), ShowAllMapIconsByte2n4, 2);
                     gData.ShowAllMapIcons = !gData.ShowAllMapIcons;
-                    //printf(_XOR_("[Active] Show All Map Icons\n"));
+                    //printf(_XOR_("[Active] ThatsGood\n"));
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("All Stratagems in Loadout"))
+            if (checkboxes[i].title == _XOR_("Ineedthis"))
             {
                 if (!gData.AllStratagems)
                 {
@@ -531,7 +614,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("All Equipment in Armory"))
+            if (checkboxes[i].title == _XOR_("asineedthis"))
             {
                 if (!gData.AllEquipment)
                 {
@@ -547,7 +630,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-            if (checkboxes[i].title == _XOR_("All Armor in Armory"))
+            if (checkboxes[i].title == _XOR_("AndEvenThose"))
             {
                 if (!gData.AllArmor)
                 {
@@ -563,7 +646,29 @@ DWORD WINAPI Payload(LPVOID lpParam)
                 }
             }
 
-           
+            /*if (checkboxes[i].title == "pretty shit")
+            {
+                if (!gData.OHK)
+                {
+                    BYTE OHKByte[] =
+                    {
+                        0x83, 0xBF, 0x38, 0x0B, 0x00, 0x00, 0x0A,
+                        0x0F, 0x85, 0x05, 0x00, 0x00, 0x00,
+                        0xE9, 0x18, 0x00, 0x00, 0x00,
+                        0xC7, 0x87, 0x44, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        0xFF, 0x25, 0x00, 0x00, 0x00, 0x00, 0x66, 0x4A, 0x6B, 0x80, 0x01, 0x00, 0x00, 0x00,
+                        0x89, 0x87, 0x44, 0x64, 0x00, 0x00,
+                        0xFF, 0x25, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+                    };
+
+                    uintptr_t OHK = Memory::FindPattern("game.dll", "89 87 44 64 00 00");
+                    LPVOID memory = Memory::AllocateMemory(OHK, 0x100);
+                    Memory::CreateTrampoline(OHK, memory);
+                    Memory::WriteAssemblyInstructions((uintptr_t)memory, OHK + 15, OHKByte, Memory::ArrayLength(OHKByte));
+                    gData.OHK = !gData.OHK;
+                   //printf("[Active] Sivarius\n");
+                }
+            }*/
             
 
 
@@ -600,4 +705,3 @@ BOOL APIENTRY DllMain(HMODULE hModule,
     }
     return TRUE;
 }
-
